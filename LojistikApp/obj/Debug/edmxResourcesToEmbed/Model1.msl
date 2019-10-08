@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="UrunlerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Urunler)">
+        <MappingFragment StoreEntitySet="UrunlerSet">
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="StokMiktari" ColumnName="StokMiktari" />
+          <ScalarProperty Name="UrunTipi" ColumnName="UrunTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonellerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Personeller)">
+        <MappingFragment StoreEntitySet="PersonellerSet">
+          <ScalarProperty Name="personel_id" ColumnName="personel_id" />
+          <ScalarProperty Name="PersonelAdSoyad" ColumnName="PersonelAdSoyad" />
+          <ScalarProperty Name="PersonelTel" ColumnName="PersonelTel" />
+          <ScalarProperty Name="Departman_departman_id" ColumnName="Departman_departman_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmanSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Departman)">
+        <MappingFragment StoreEntitySet="DepartmanSet">
+          <ScalarProperty Name="departman_id" ColumnName="departman_id" />
+          <ScalarProperty Name="DepartmanAdi" ColumnName="DepartmanAdi" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TasiyiciFirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.TasiyiciFirmalar)">
+        <MappingFragment StoreEntitySet="TasiyiciFirmalarSet">
+          <ScalarProperty Name="tasiyici_id" ColumnName="tasiyici_id" />
+          <ScalarProperty Name="TFirmaAdi" ColumnName="TFirmaAdi" />
+          <ScalarProperty Name="TFirmaAdresi" ColumnName="TFirmaAdresi" />
+          <ScalarProperty Name="TFirmaTel" ColumnName="TFirmaTel" />
+          <ScalarProperty Name="TasimaSekli" ColumnName="TasimaSekli" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UreticiFirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.UreticiFirmalar)">
+        <MappingFragment StoreEntitySet="UreticiFirmalarSet">
+          <ScalarProperty Name="uretici_id" ColumnName="uretici_id" />
+          <ScalarProperty Name="UFirmaAdi" ColumnName="UFirmaAdi" />
+          <ScalarProperty Name="UFirmaAdres" ColumnName="UFirmaAdres" />
+          <ScalarProperty Name="UFirmaTel" ColumnName="UFirmaTel" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AliciFirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AliciFirmalar)">
+        <MappingFragment StoreEntitySet="AliciFirmalarSet">
+          <ScalarProperty Name="alici_id" ColumnName="alici_id" />
+          <ScalarProperty Name="AFirmaAdi" ColumnName="AFirmaAdi" />
+          <ScalarProperty Name="AFirmaAdres" ColumnName="AFirmaAdres" />
+          <ScalarProperty Name="AFirmaTel" ColumnName="AFirmaTel" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SevkiyatSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Sevkiyat)">
+        <MappingFragment StoreEntitySet="SevkiyatSet">
+          <ScalarProperty Name="sevkiyat_id" ColumnName="sevkiyat_id" />
+          <ScalarProperty Name="SevkAdi" ColumnName="SevkAdi" />
+          <ScalarProperty Name="Ulke" ColumnName="Ulke" />
+          <ScalarProperty Name="Urunler_urun_id" ColumnName="Urunler_urun_id" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Firmalar)">
+        <MappingFragment StoreEntitySet="FirmalarSet">
+          <ScalarProperty Name="firma_id" ColumnName="firma_id" />
+          <ScalarProperty Name="FirmaTipi" ColumnName="FirmaTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

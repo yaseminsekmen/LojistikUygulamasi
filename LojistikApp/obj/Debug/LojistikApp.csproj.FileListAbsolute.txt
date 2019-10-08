@@ -1,0 +1,42 @@
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\LojistikApp.exe.config
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\LojistikApp.exe
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\LojistikApp.pdb
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\EntityFramework.dll
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\EntityFramework.xml
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.csprojResolveAssemblyReference.cache
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Form1.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Form2.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Properties.Resources.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.csproj.GenerateResource.Cache
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.exe
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.pdb
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.AFirma.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.TFirma.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.UFirma.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Depart.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Pers.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Ur.resources
+C:\Users\smart.ogrenci\Desktop\Yasemin SEKMEN\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Sevk.resources
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\LojistikApp.exe.config
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.exe
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.pdb
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\LojistikApp.exe
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\LojistikApp.pdb
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\EntityFramework.dll
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\EntityFramework.SqlServer.dll
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\EntityFramework.xml
+E:\smartpro\LojistikApp\LojistikApp\bin\Debug\EntityFramework.SqlServer.xml
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.csprojResolveAssemblyReference.cache
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.AFirma.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Depart.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Form1.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Form2.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Pers.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Properties.Resources.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Sevk.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.TFirma.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.UFirma.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.Ur.resources
+E:\smartpro\LojistikApp\LojistikApp\obj\Debug\LojistikApp.csproj.GenerateResource.Cache

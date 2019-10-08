@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="UrunlerSet" EntityType="Model1.Store.UrunlerSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonellerSet" EntityType="Model1.Store.PersonellerSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DepartmanSet" EntityType="Model1.Store.DepartmanSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TasiyiciFirmalarSet" EntityType="Model1.Store.TasiyiciFirmalarSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UreticiFirmalarSet" EntityType="Model1.Store.UreticiFirmalarSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AliciFirmalarSet" EntityType="Model1.Store.AliciFirmalarSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SevkiyatSet" EntityType="Model1.Store.SevkiyatSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FirmalarSet" EntityType="Model1.Store.FirmalarSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DepartmanPersoneller" Association="Model1.Store.DepartmanPersoneller">
+      <End Role="Departman" EntitySet="DepartmanSet" />
+      <End Role="Personeller" EntitySet="PersonellerSet" />
+    </AssociationSet>
+    <AssociationSet Name="FirmalarAliciFirmalar" Association="Model1.Store.FirmalarAliciFirmalar">
+      <End Role="Firmalar" EntitySet="FirmalarSet" />
+      <End Role="AliciFirmalar" EntitySet="AliciFirmalarSet" />
+    </AssociationSet>
+    <AssociationSet Name="FirmalarTasiyiciFirmalar" Association="Model1.Store.FirmalarTasiyiciFirmalar">
+      <End Role="Firmalar" EntitySet="FirmalarSet" />
+      <End Role="TasiyiciFirmalar" EntitySet="TasiyiciFirmalarSet" />
+    </AssociationSet>
+    <AssociationSet Name="FirmalarUreticiFirmalar" Association="Model1.Store.FirmalarUreticiFirmalar">
+      <End Role="Firmalar" EntitySet="FirmalarSet" />
+      <End Role="UreticiFirmalar" EntitySet="UreticiFirmalarSet" />
+    </AssociationSet>
+    <AssociationSet Name="FirmalarDepartman" Association="Model1.Store.FirmalarDepartman">
+      <End Role="Firmalar" EntitySet="FirmalarSet" />
+      <End Role="Departman" EntitySet="DepartmanSet" />
+    </AssociationSet>
+    <AssociationSet Name="SevkiyatUrunler" Association="Model1.Store.SevkiyatUrunler">
+      <End Role="Sevkiyat" EntitySet="SevkiyatSet" />
+      <End Role="Urunler" EntitySet="UrunlerSet" />
+    </AssociationSet>
+    <AssociationSet Name="FirmalarSevkiyat" Association="Model1.Store.FirmalarSevkiyat">
+      <End Role="Firmalar" EntitySet="FirmalarSet" />
+      <End Role="Sevkiyat" EntitySet="SevkiyatSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UrunlerSet">
+    <Key>
+      <PropertyRef Name="urun_id" />
+    </Key>
+    <Property Name="urun_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StokMiktari" Type="int" Nullable="false" />
+    <Property Name="UrunTipi" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonellerSet">
+    <Key>
+      <PropertyRef Name="personel_id" />
+    </Key>
+    <Property Name="personel_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonelTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Departman_departman_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DepartmanSet">
+    <Key>
+      <PropertyRef Name="departman_id" />
+    </Key>
+    <Property Name="departman_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmanAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Firmalar_firma_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TasiyiciFirmalarSet">
+    <Key>
+      <PropertyRef Name="tasiyici_id" />
+    </Key>
+    <Property Name="tasiyici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TFirmaAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TFirmaAdresi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TFirmaTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TasimaSekli" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Firmalar_firma_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UreticiFirmalarSet">
+    <Key>
+      <PropertyRef Name="uretici_id" />
+    </Key>
+    <Property Name="uretici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UFirmaAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UFirmaAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UFirmaTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Firmalar_firma_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AliciFirmalarSet">
+    <Key>
+      <PropertyRef Name="alici_id" />
+    </Key>
+    <Property Name="alici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AFirmaAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AFirmaAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AFirmaTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Firmalar_firma_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SevkiyatSet">
+    <Key>
+      <PropertyRef Name="sevkiyat_id" />
+    </Key>
+    <Property Name="sevkiyat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SevkAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ulke" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Urunler_urun_id" Type="int" Nullable="false" />
+    <Property Name="Firmalar_firma_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FirmalarSet">
+    <Key>
+      <PropertyRef Name="firma_id" />
+    </Key>
+    <Property Name="firma_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirmaTipi" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="DepartmanPersoneller">
+    <End Role="Departman" Type="Model1.Store.DepartmanSet" Multiplicity="1" />
+    <End Role="Personeller" Type="Model1.Store.PersonellerSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departman">
+        <PropertyRef Name="departman_id" />
+      </Principal>
+      <Dependent Role="Personeller">
+        <PropertyRef Name="Departman_departman_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FirmalarAliciFirmalar">
+    <End Role="Firmalar" Type="Model1.Store.FirmalarSet" Multiplicity="1" />
+    <End Role="AliciFirmalar" Type="Model1.Store.AliciFirmalarSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firmalar">
+        <PropertyRef Name="firma_id" />
+      </Principal>
+      <Dependent Role="AliciFirmalar">
+        <PropertyRef Name="Firmalar_firma_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FirmalarTasiyiciFirmalar">
+    <End Role="Firmalar" Type="Model1.Store.FirmalarSet" Multiplicity="1" />
+    <End Role="TasiyiciFirmalar" Type="Model1.Store.TasiyiciFirmalarSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firmalar">
+        <PropertyRef Name="firma_id" />
+      </Principal>
+      <Dependent Role="TasiyiciFirmalar">
+        <PropertyRef Name="Firmalar_firma_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FirmalarUreticiFirmalar">
+    <End Role="Firmalar" Type="Model1.Store.FirmalarSet" Multiplicity="1" />
+    <End Role="UreticiFirmalar" Type="Model1.Store.UreticiFirmalarSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firmalar">
+        <PropertyRef Name="firma_id" />
+      </Principal>
+      <Dependent Role="UreticiFirmalar">
+        <PropertyRef Name="Firmalar_firma_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FirmalarDepartman">
+    <End Role="Firmalar" Type="Model1.Store.FirmalarSet" Multiplicity="1" />
+    <End Role="Departman" Type="Model1.Store.DepartmanSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firmalar">
+        <PropertyRef Name="firma_id" />
+      </Principal>
+      <Dependent Role="Departman">
+        <PropertyRef Name="Firmalar_firma_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SevkiyatUrunler">
+    <End Role="Sevkiyat" Type="Model1.Store.SevkiyatSet" Multiplicity="*" />
+    <End Role="Urunler" Type="Model1.Store.UrunlerSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="urun_id" />
+      </Principal>
+      <Dependent Role="Sevkiyat">
+        <PropertyRef Name="Urunler_urun_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FirmalarSevkiyat">
+    <End Role="Firmalar" Type="Model1.Store.FirmalarSet" Multiplicity="1" />
+    <End Role="Sevkiyat" Type="Model1.Store.SevkiyatSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firmalar">
+        <PropertyRef Name="firma_id" />
+      </Principal>
+      <Dependent Role="Sevkiyat">
+        <PropertyRef Name="Firmalar_firma_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UrunlerSet" EntityType="Model1.Urunler" />
+          <EntitySet Name="PersonellerSet" EntityType="Model1.Personeller" />
+          <EntitySet Name="DepartmanSet" EntityType="Model1.Departman" />
+          <EntitySet Name="TasiyiciFirmalarSet" EntityType="Model1.TasiyiciFirmalar" />
+          <EntitySet Name="UreticiFirmalarSet" EntityType="Model1.UreticiFirmalar" />
+          <EntitySet Name="AliciFirmalarSet" EntityType="Model1.AliciFirmalar" />
+          <EntitySet Name="SevkiyatSet" EntityType="Model1.Sevkiyat" />
+          <AssociationSet Name="DepartmanPersoneller" Association="Model1.DepartmanPersoneller">
+            <End Role="Departman" EntitySet="DepartmanSet" />
+            <End Role="Personeller" EntitySet="PersonellerSet" />
+          </AssociationSet>
+          <EntitySet Name="FirmalarSet" EntityType="Model1.Firmalar" />
+          <AssociationSet Name="FirmalarAliciFirmalar" Association="Model1.FirmalarAliciFirmalar">
+            <End Role="Firmalar" EntitySet="FirmalarSet" />
+            <End Role="AliciFirmalar" EntitySet="AliciFirmalarSet" />
+          </AssociationSet>
+          <AssociationSet Name="FirmalarTasiyiciFirmalar" Association="Model1.FirmalarTasiyiciFirmalar">
+            <End Role="Firmalar" EntitySet="FirmalarSet" />
+            <End Role="TasiyiciFirmalar" EntitySet="TasiyiciFirmalarSet" />
+          </AssociationSet>
+          <AssociationSet Name="FirmalarUreticiFirmalar" Association="Model1.FirmalarUreticiFirmalar">
+            <End Role="Firmalar" EntitySet="FirmalarSet" />
+            <End Role="UreticiFirmalar" EntitySet="UreticiFirmalarSet" />
+          </AssociationSet>
+          <AssociationSet Name="FirmalarDepartman" Association="Model1.FirmalarDepartman">
+            <End Role="Firmalar" EntitySet="FirmalarSet" />
+            <End Role="Departman" EntitySet="DepartmanSet" />
+          </AssociationSet>
+          <AssociationSet Name="SevkiyatUrunler" Association="Model1.SevkiyatUrunler">
+            <End Role="Sevkiyat" EntitySet="SevkiyatSet" />
+            <End Role="Urunler" EntitySet="UrunlerSet" />
+          </AssociationSet>
+          <AssociationSet Name="FirmalarSevkiyat" Association="Model1.FirmalarSevkiyat">
+            <End Role="Firmalar" EntitySet="FirmalarSet" />
+            <End Role="Sevkiyat" EntitySet="SevkiyatSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Urunler">
+          <Key>
+            <PropertyRef Name="urun_id" />
+          </Key>
+          <Property Name="urun_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunAdi" Type="String" Nullable="false" />
+          <Property Name="StokMiktari" Type="Int32" Nullable="false" />
+          <Property Name="UrunTipi" Type="String" Nullable="false" />
+          <NavigationProperty Name="Sevkiyat" Relationship="Model1.SevkiyatUrunler" FromRole="Urunler" ToRole="Sevkiyat" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="personel_id" />
+          </Key>
+          <Property Name="personel_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelAdSoyad" Type="String" Nullable="false" />
+          <Property Name="PersonelTel" Type="String" Nullable="false" />
+          <NavigationProperty Name="Departman" Relationship="Model1.DepartmanPersoneller" FromRole="Personeller" ToRole="Departman" />
+          <Property Name="Departman_departman_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departman">
+          <Key>
+            <PropertyRef Name="departman_id" />
+          </Key>
+          <Property Name="departman_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmanAdi" Type="String" Nullable="false" />
+          <NavigationProperty Name="Personeller" Relationship="Model1.DepartmanPersoneller" FromRole="Departman" ToRole="Personeller" />
+          <NavigationProperty Name="Firmalar" Relationship="Model1.FirmalarDepartman" FromRole="Departman" ToRole="Firmalar" />
+          <Property Name="Firmalar_firma_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TasiyiciFirmalar">
+          <Key>
+            <PropertyRef Name="tasiyici_id" />
+          </Key>
+          <Property Name="tasiyici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TFirmaAdi" Type="String" Nullable="false" />
+          <Property Name="TFirmaAdresi" Type="String" Nullable="false" />
+          <Property Name="TFirmaTel" Type="String" Nullable="false" />
+          <Property Name="TasimaSekli" Type="String" Nullable="false" />
+          <NavigationProperty Name="Firmalar" Relationship="Model1.FirmalarTasiyiciFirmalar" FromRole="TasiyiciFirmalar" ToRole="Firmalar" />
+          <Property Name="Firmalar_firma_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UreticiFirmalar">
+          <Key>
+            <PropertyRef Name="uretici_id" />
+          </Key>
+          <Property Name="uretici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UFirmaAdi" Type="String" Nullable="false" />
+          <Property Name="UFirmaAdres" Type="String" Nullable="false" />
+          <Property Name="UFirmaTel" Type="String" Nullable="false" />
+          <NavigationProperty Name="Firmalar" Relationship="Model1.FirmalarUreticiFirmalar" FromRole="UreticiFirmalar" ToRole="Firmalar" />
+          <Property Name="Firmalar_firma_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AliciFirmalar">
+          <Key>
+            <PropertyRef Name="alici_id" />
+          </Key>
+          <Property Name="alici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AFirmaAdi" Type="String" Nullable="false" />
+          <Property Name="AFirmaAdres" Type="String" Nullable="false" />
+          <Property Name="AFirmaTel" Type="String" Nullable="false" />
+          <NavigationProperty Name="Firmalar" Relationship="Model1.FirmalarAliciFirmalar" FromRole="AliciFirmalar" ToRole="Firmalar" />
+          <Property Name="Firmalar_firma_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sevkiyat">
+          <Key>
+            <PropertyRef Name="sevkiyat_id" />
+          </Key>
+          <Property Name="sevkiyat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SevkAdi" Type="String" Nullable="false" />
+          <Property Name="Ulke" Type="String" Nullable="false" />
+          <NavigationProperty Name="Urunler" Relationship="Model1.SevkiyatUrunler" FromRole="Sevkiyat" ToRole="Urunler" />
+          <Property Name="Urunler_urun_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Firmalar" Relationship="Model1.FirmalarSevkiyat" FromRole="Sevkiyat" ToRole="Firmalar" />
+          <Property Name="Firmalar_firma_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="DepartmanPersoneller">
+          <End Type="Model1.Departman" Role="Departman" Multiplicity="1" />
+          <End Type="Model1.Personeller" Role="Personeller" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departman">
+              <PropertyRef Name="departman_id" />
+            </Principal>
+            <Dependent Role="Personeller">
+              <PropertyRef Name="Departman_departman_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Firmalar">
+          <Key>
+            <PropertyRef Name="firma_id" />
+          </Key>
+          <Property Name="firma_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirmaTipi" Type="String" Nullable="false" />
+          <NavigationProperty Name="AliciFirmalar" Relationship="Model1.FirmalarAliciFirmalar" FromRole="Firmalar" ToRole="AliciFirmalar" />
+          <NavigationProperty Name="TasiyiciFirmalar" Relationship="Model1.FirmalarTasiyiciFirmalar" FromRole="Firmalar" ToRole="TasiyiciFirmalar" />
+          <NavigationProperty Name="UreticiFirmalar" Relationship="Model1.FirmalarUreticiFirmalar" FromRole="Firmalar" ToRole="UreticiFirmalar" />
+          <NavigationProperty Name="Departman" Relationship="Model1.FirmalarDepartman" FromRole="Firmalar" ToRole="Departman" />
+          <NavigationProperty Name="Sevkiyat" Relationship="Model1.FirmalarSevkiyat" FromRole="Firmalar" ToRole="Sevkiyat" />
+        </EntityType>
+        <Association Name="FirmalarAliciFirmalar">
+          <End Type="Model1.Firmalar" Role="Firmalar" Multiplicity="1" />
+          <End Type="Model1.AliciFirmalar" Role="AliciFirmalar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmalar">
+              <PropertyRef Name="firma_id" />
+            </Principal>
+            <Dependent Role="AliciFirmalar">
+              <PropertyRef Name="Firmalar_firma_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FirmalarTasiyiciFirmalar">
+          <End Type="Model1.Firmalar" Role="Firmalar" Multiplicity="1" />
+          <End Type="Model1.TasiyiciFirmalar" Role="TasiyiciFirmalar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmalar">
+              <PropertyRef Name="firma_id" />
+            </Principal>
+            <Dependent Role="TasiyiciFirmalar">
+              <PropertyRef Name="Firmalar_firma_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FirmalarUreticiFirmalar">
+          <End Type="Model1.Firmalar" Role="Firmalar" Multiplicity="1" />
+          <End Type="Model1.UreticiFirmalar" Role="UreticiFirmalar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmalar">
+              <PropertyRef Name="firma_id" />
+            </Principal>
+            <Dependent Role="UreticiFirmalar">
+              <PropertyRef Name="Firmalar_firma_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FirmalarDepartman">
+          <End Type="Model1.Firmalar" Role="Firmalar" Multiplicity="1" />
+          <End Type="Model1.Departman" Role="Departman" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmalar">
+              <PropertyRef Name="firma_id" />
+            </Principal>
+            <Dependent Role="Departman">
+              <PropertyRef Name="Firmalar_firma_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SevkiyatUrunler">
+          <End Type="Model1.Sevkiyat" Role="Sevkiyat" Multiplicity="*" />
+          <End Type="Model1.Urunler" Role="Urunler" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Urunler">
+              <PropertyRef Name="urun_id" />
+            </Principal>
+            <Dependent Role="Sevkiyat">
+              <PropertyRef Name="Urunler_urun_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FirmalarSevkiyat">
+          <End Type="Model1.Firmalar" Role="Firmalar" Multiplicity="1" />
+          <End Type="Model1.Sevkiyat" Role="Sevkiyat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmalar">
+              <PropertyRef Name="firma_id" />
+            </Principal>
+            <Dependent Role="Sevkiyat">
+              <PropertyRef Name="Firmalar_firma_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="UrunlerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Urunler)">
+        <MappingFragment StoreEntitySet="UrunlerSet">
+          <ScalarProperty Name="urun_id" ColumnName="urun_id" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="StokMiktari" ColumnName="StokMiktari" />
+          <ScalarProperty Name="UrunTipi" ColumnName="UrunTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonellerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Personeller)">
+        <MappingFragment StoreEntitySet="PersonellerSet">
+          <ScalarProperty Name="personel_id" ColumnName="personel_id" />
+          <ScalarProperty Name="PersonelAdSoyad" ColumnName="PersonelAdSoyad" />
+          <ScalarProperty Name="PersonelTel" ColumnName="PersonelTel" />
+          <ScalarProperty Name="Departman_departman_id" ColumnName="Departman_departman_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmanSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Departman)">
+        <MappingFragment StoreEntitySet="DepartmanSet">
+          <ScalarProperty Name="departman_id" ColumnName="departman_id" />
+          <ScalarProperty Name="DepartmanAdi" ColumnName="DepartmanAdi" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TasiyiciFirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.TasiyiciFirmalar)">
+        <MappingFragment StoreEntitySet="TasiyiciFirmalarSet">
+          <ScalarProperty Name="tasiyici_id" ColumnName="tasiyici_id" />
+          <ScalarProperty Name="TFirmaAdi" ColumnName="TFirmaAdi" />
+          <ScalarProperty Name="TFirmaAdresi" ColumnName="TFirmaAdresi" />
+          <ScalarProperty Name="TFirmaTel" ColumnName="TFirmaTel" />
+          <ScalarProperty Name="TasimaSekli" ColumnName="TasimaSekli" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UreticiFirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.UreticiFirmalar)">
+        <MappingFragment StoreEntitySet="UreticiFirmalarSet">
+          <ScalarProperty Name="uretici_id" ColumnName="uretici_id" />
+          <ScalarProperty Name="UFirmaAdi" ColumnName="UFirmaAdi" />
+          <ScalarProperty Name="UFirmaAdres" ColumnName="UFirmaAdres" />
+          <ScalarProperty Name="UFirmaTel" ColumnName="UFirmaTel" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AliciFirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AliciFirmalar)">
+        <MappingFragment StoreEntitySet="AliciFirmalarSet">
+          <ScalarProperty Name="alici_id" ColumnName="alici_id" />
+          <ScalarProperty Name="AFirmaAdi" ColumnName="AFirmaAdi" />
+          <ScalarProperty Name="AFirmaAdres" ColumnName="AFirmaAdres" />
+          <ScalarProperty Name="AFirmaTel" ColumnName="AFirmaTel" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SevkiyatSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Sevkiyat)">
+        <MappingFragment StoreEntitySet="SevkiyatSet">
+          <ScalarProperty Name="sevkiyat_id" ColumnName="sevkiyat_id" />
+          <ScalarProperty Name="SevkAdi" ColumnName="SevkAdi" />
+          <ScalarProperty Name="Ulke" ColumnName="Ulke" />
+          <ScalarProperty Name="Urunler_urun_id" ColumnName="Urunler_urun_id" />
+          <ScalarProperty Name="Firmalar_firma_id" ColumnName="Firmalar_firma_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmalarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Firmalar)">
+        <MappingFragment StoreEntitySet="FirmalarSet">
+          <ScalarProperty Name="firma_id" ColumnName="firma_id" />
+          <ScalarProperty Name="FirmaTipi" ColumnName="FirmaTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

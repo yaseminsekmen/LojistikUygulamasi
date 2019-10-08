@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a626b55188dc497d83e288e3544a9966" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.Urunler" Width="1.5" PointX="5" PointY="2.875" />
+        <EntityTypeShape EntityType="Model1.Personeller" Width="1.5" PointX="7" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Departman" Width="1.5" PointX="0.5" PointY="0.875" />
+        <EntityTypeShape EntityType="Model1.TasiyiciFirmalar" Width="1.5" PointX="9.125" PointY="1.375" />
+        <EntityTypeShape EntityType="Model1.UreticiFirmalar" Width="1.5" PointX="0.5" PointY="3" />
+        <EntityTypeShape EntityType="Model1.AliciFirmalar" Width="1.5" PointX="3.25" PointY="1.5" />
+        <EntityTypeShape EntityType="Model1.Sevkiyat" Width="1.5" PointX="7.125" PointY="3.375" />
+        <AssociationConnector Association="Model1.DepartmanPersoneller" />
+        <EntityTypeShape EntityType="Model1.Firmalar" Width="1.5" PointX="2.875" PointY="4.375" />
+        <AssociationConnector Association="Model1.FirmalarAliciFirmalar" />
+        <AssociationConnector Association="Model1.FirmalarTasiyiciFirmalar" />
+        <AssociationConnector Association="Model1.FirmalarUreticiFirmalar" />
+        <AssociationConnector Association="Model1.FirmalarDepartman" />
+        <AssociationConnector Association="Model1.SevkiyatUrunler" />
+        <AssociationConnector Association="Model1.FirmalarSevkiyat" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
